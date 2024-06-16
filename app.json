@@ -4,24 +4,78 @@
     "slug": "Spacebox",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.spacebox",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "NSCameraUsageDescription": "This app uses the camera to take photos",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to select images."
       }
     },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "com.spacebox",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["INTERNET", "CAMERA"]
+    },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./src/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c1992592-b266-412f-b168-ce91da2607fb"
+      }
+    },
+    "plugins": [
+      [
+        "@react-native-firebase/app",
+        {
+          "ios": {
+            "use_frameworks": "static"
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to save in cloud server."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow Spacebox to access your camera."
+        }
+      ],
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermission": "Allow Spacebox to access your camera."
+        }
+      ],
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ]
   }
 }

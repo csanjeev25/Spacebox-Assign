@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "670379175577",
+    "project_id": "spacebox-9dfc7",
+    "storage_bucket": "spacebox-9dfc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670379175577:android:b919f8c637d5f1a082d208",
+        "android_client_info": {
+          "package_name": "com.spacebox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDNzMVuVNBsf1Mrlunpi6UARxbYWtT_vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
